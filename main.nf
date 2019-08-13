@@ -4,11 +4,12 @@ echo true
 cheers = Channel.from 'Bonjour', 'Ciao', 'Hello', 'Hola'
 
 process sayHello {
-  input: 
+  executor 'slurm'
+
+  input:
     val x from cheers
   script:
     """
-    echo '$x world!'
+    echo "$x world from \$HOSTNAME on Slurm!"
     """
 }
-
