@@ -10,6 +10,6 @@ process sayHello {
     val x from cheers
   script:
     """
-    echo "$x world from \$HOSTNAME on Slurm!"
+    echo "$x $params.world from \$HOSTNAME on Slurm!"
     """
 }
