@@ -4,11 +4,10 @@ echo true
 cheers = Channel.from 'Bonjour', 'Ciao', 'Hello', 'Hola'
 
 process sayHello {
-  input: 
+  input:
     val x from cheers
   script:
     """
-    echo '$x world!'
+    echo '$x $params.world!'
     """
 }
-
