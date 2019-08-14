@@ -2,6 +2,7 @@
 echo true
 
 cheers = Channel.from 'Bonjour', 'Ciao', 'Hello', 'Hola'
+params.world = 'world' //setting default value, modify at runtime with e.g.: --world Mundo
 
 process sayHello {
   input:
